@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script defer src=" https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js "> </script>
+    <script defer src="./js/app.js"></script>
+</head>
+
+<body class="py-5 container">
+    <div class="col-md-8 ">
+        <div class="container-fluid d-flex justify-content-start py-3 ">
+            <button type="button" class="btn btn-primary btnManager mx-3" id="btnRender5">SIGUIENTES: 5 Países</button>
+            <button type="button" class="btn btn-warning btnManager mx-3" id="btnRender10">SIGUIENTES: 10 Países</button>
+            <button type="button" class="btn btn-warning btnManager mx-3" id="btnRender20">SIGUIENTES: 20 Países</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">País</th>
+                    <th scope="col">Continente</th>
+                    <th scope="col">Población</th>
+                    <th scope="col">PIB 2019</th>
+                    <th scope="col">PIB 2020</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="datos">
+                <!-- datos -->
+            </tbody>
+        </table>
+
+        <div class="row">
+            <form class="py-5 col">
+                <h3>Crear producto</h3>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nameAdd" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">ContiSIGUIENTES: nente</label>
+                    <input type="text" class="form-control" id="continenteAdd" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Población</label>
+                    <input type="number" class="form-control" id="poblacionAdd" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">PIB 2019</label>
+                    <input type="number" class="form-control" id="Add2019" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">PIB 2020</label>
+                    <input type="number" class="form-control" id="Add2020" aria-describedby="emailHelp">
+                </div>
+                <button type="button" id="btnAdd" class="btn btn-success">AGREGAR</button>
+            </form>
+        </div>
+        <form class="py-5 col w-25 backfillManager">
+            <h2>Eliminar producto</h2>
+            <div class="py-2">
+                <label class="form-label">Nombre del país</label>
+                <input type="text" class="form-control" id="idDelete">
+            </div>
+            <button type="button" class="btn btn-danger" id="btnDelete">ELIMINAR</button>
+        </form>
+    </div>
+
+    <template id="templateDatos">
+        <tr>
+            <td id="1">Mark</td>
+            <td id="2"></td>
+            <td id="3"></td>
+            <td id="4">@mdo</td>
+            <td id="5">@mdo</td>
+        </tr>
+    </template>
+</body>
+
+</html>
